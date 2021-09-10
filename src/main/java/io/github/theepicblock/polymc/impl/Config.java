@@ -38,8 +38,7 @@ import java.util.List;
  */
 @SuppressWarnings({"unused", "MismatchedQueryAndUpdateOfCollection", "JavadocReference"})
 public class Config {
-    public static final int LATEST_VERSION = 5;
-    public ResourcePackConfig resourcepack;
+    public static final int LATEST_VERSION = 6;
     public MiscConfig misc;
     private int configVersion;
     private List<String> disabledMixins;
@@ -58,10 +57,6 @@ public class Config {
         return (misc.processSyncedBlockEventServerSide.size() == 0 &&
                    (mixin.equals("block.ProcessSyncedBlockEventServerSideImplementation") ||
                    mixin.equals("ServerParticlePatch")));
-    }
-
-    public static class ResourcePackConfig {
-        public boolean advancedDiscovery;
     }
 
     public static class MiscConfig {
